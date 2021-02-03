@@ -1,0 +1,38 @@
+/*출처 : https://codepen.io/FrankieDoodie/pen/dgVGad*/
+body
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: white;
+}
+
+h2
+{
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #fff, #f00, #fff) no-repeat;
+    background-size: 80%;
+    animation: animate 4s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate
+{
+    0%
+    {
+        background-position: -500%;
+    }
+    100%
+    {
+        background-position: 500%;
+    }
+}
