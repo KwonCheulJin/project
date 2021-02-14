@@ -16,7 +16,7 @@
 }
 
 html {
-    font-family: BMJUA
+    font-family: BMJUA, serif
 }
 
 *, ::before, ::after {
@@ -40,7 +40,7 @@ body, div, button, h1 {
 }
 
 #wrapper {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,7 +60,7 @@ body, div, button, h1 {
     font-weight: bold;
 }
 
-#whatisdate {
+#whatis-date {
     height: 45px;
     font-size: 25px;
 }
@@ -68,12 +68,14 @@ body, div, button, h1 {
 .deadline {
     text-align: left;
 }
+
 .line {
     margin-top: 10px;
 }
 
 .lotto-list {
     display: block;
+    line-height: 50px;
 }
 
 .list-sum {
@@ -84,7 +86,6 @@ body, div, button, h1 {
 .ball {
     width: 28px;
     height: 45px;
-    line-height: 80px;
     border-radius: 50%;
     margin-right: 10px;
     font-size: 22px;
@@ -197,15 +198,15 @@ body, div, button, h1 {
 
 
 .loader {
-/*    margin: 0;*/
-/*    padding: 0;*/
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     position: relative;
     /*font-family: sans-serif;*/
     text-transform: uppercase;
-/*    font-size: 0.3em;*/
-/*    letter-spacing: 4px;*/
+    /*    font-size: 0.3em;*/
+    /*    letter-spacing: 4px;*/
     overflow: hidden;
     background: linear-gradient(90deg, #fff, #f00, #fff) no-repeat;
     background-size: 80%;
@@ -221,4 +222,22 @@ body, div, button, h1 {
     100% {
         background-position: 500%;
     }
+}
+
+.lotto-infoNum {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px
+}
+
+select{
+    margin: 0 40px 0 0;
+    border: 2px solid;
+}
+
+input {
+    width: 180px;
+    border: 2px solid;
 }

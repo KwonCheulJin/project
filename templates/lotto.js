@@ -26,7 +26,7 @@ function whatis_date() {
     let result = parseInt(dif / cDay);
     let round = Math.floor(result / 7) + 914;
 
-    document.getElementById("whatisdate").innerText = "제 " + round + "회";
+    document.getElementById("whatis-date").innerText = "제 " + round + "회";
 
     /*raffle-day*/
     let r_add = (Math.floor(result / 7) + 1) * 7;
@@ -98,7 +98,7 @@ btn.addEventListener("click", function () {
             setTimeout(function () {
                 tmp = 1,
                     btn.classList.remove("hide")
-            }, 1000)
+            }, 10)
     )
 });
 
@@ -119,8 +119,8 @@ function lottery() {
             numbers.splice(random, 1)
         }
 
-        var h, t, index;
-        var tmp;
+        let h, t, index;
+        let tmp;
         for (h = 0; h < 5; h++) {
             index = h;
             for (t = h + 1; t < 6; t++) {
@@ -143,7 +143,7 @@ function decryptEffect(elem, time) {
     elem.classList.add("done")
     elem.innerText = double_ary[list_index][time - 2];
 
-    if (time == 7) {
+    if (time === 7) {
         list_index++;
     }
 

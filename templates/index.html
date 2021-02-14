@@ -8,26 +8,45 @@
         <link rel="stylesheet" href="style.css">
         <meta name="viewport"
               content="width=device-width, height=580, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
 
     <body>
         <div class="loader">
             <h2>경고! 결과에 대해서 책임을 지지 않습니다. 재미로 이용해주세요!</h2>
-
         </div>
+
+        <div class="lotto-infoNum">
+            <label class="lotto-date">
+                <select name="select_date" onChange="selectDate(this)">
+                    <option value="" selected>선택하세요</option>
+                    <option value="950회">950회</option>
+                    <option value="949회">949회</option>
+                    <option value="949회">949회</option>
+                    <option value="947회">947회</option>
+                </select>
+            </label>
+            <label class="lotto-data">
+                <input name="lottoNum" type="text" value="1,2,3,4,5">
+            </label>
+        </div>
+
+        <!--            출처: https://doriri.tistory.com/59 [My Programming]-->
+
         <div id="wrapper">
-<!--            <h1 id="title">로또 복권</h1>-->
+            <!--            <h1 id="title">로또 복권</h1>-->
 
             <div id="numbers">
 
                 <div id="lotto-title">Lotto 6/45</div>
-                <div id="whatisdate">제 845회</div>
+                <div id="whatis-date">제 845회</div>
 
                 <div class="deadline">
                     <div id="publish-day">발 행 일 : 2020/02/01</div>
                     <div id="raffle-day">추 첨 일 : 2020/02/01</div>
                     <div id="payments-day">지급기한 : 2020/02/01</div>
-                    <div class="line" style="background: url(//i1.daumcdn.net/deco/contents/horizontalrule/line05.gif?v=2) repeat-x scroll left;  width: 99%; height: 15px">
+                    <div class="line"
+                         style="background: url(//i1.daumcdn.net/deco/contents/horizontalrule/line05.gif?v=2) repeat-x scroll left;  width: 99%; height: 15px">
                         <hr style="border: black 0 none; left: -9999px; position: relative; top: -9999px">
                     </div>
                 </div>

@@ -68,3 +68,6 @@ if __name__ == '__main__':
     insert_episode_to_db()
 
 # 출처 : https://myjamong.tistory.com/58 [로또 분석] 로또API 이용 pymongo로 당첨 정보 수집 :: 마이자몽
+
+
+# db.lotto_db.find({"drwNo": { $gte: 946, $lt: 951 }}).pretty();

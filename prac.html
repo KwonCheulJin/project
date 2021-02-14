@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>로또 추첨기</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport"
+              content="width=device-width, height=580, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            .lotto-infoNum {
+                margin-top: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+
+            select {
+                margin: 0 20px 0 35px;
+                border: 2px solid;
+            }
+
+            input {
+                width: 180px;
+                margin-right: 35px;
+                border: 2px solid;
+            }
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <div class="lotto-infoNum">
+            <label>
+                <select class="select-date" id="select-drwNo">
+                    <option selected value="">당첨번호</option>
+                    <option value="950회">950회</option>
+                    <option value="949회">949회</option>
+                    <option value="948회">948회</option>
+                    <option value="947회">947회</option>
+                </select>
+            </label>
+            <label>
+                <input type="text" class="lotto-num" id="num-info" value="1,2,3,4,5">
+            </label>
+        </div>
+    </body>
+</html>
