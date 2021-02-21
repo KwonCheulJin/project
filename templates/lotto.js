@@ -149,3 +149,28 @@ function decryptEffect(elem, time) {
 
 
 }
+
+$(document).ready(function () {
+    // 처음 보는 함수죠? 웹 페이지를 새로고침할 때마다 괄호 안 명령어가 실행된답니다!
+    // $('#num-info').empty();
+});
+
+
+function valueSelect() {
+    // let drwNo = $('#select-drwNo > option:selected').val();
+    // console.log(drwNo);
+
+    // 1. ajax 로 데이터 가져온 후에
+    // 2. #lotto-result 에 화면 그려주기
+    // $('#num-info').empty();
+    $.ajax({
+        type: "GET",
+        url: "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=950",
+        data: {},
+        success: function (response) {
+            console.log(response)
+
+
+        }
+    })
+}

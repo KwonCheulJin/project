@@ -17,18 +17,21 @@
         </div>
 
         <div class="lotto-infoNum">
-            <label class="lotto-date">
-                <select name="select_date" onChange="selectDate(this)">
-                    <option value="" selected>선택하세요</option>
+            <label>
+                <select class="select-date" id="select-drwNo">
+                    <option selected value="">당첨번호</option>
                     <option value="950회">950회</option>
                     <option value="949회">949회</option>
-                    <option value="949회">949회</option>
+                    <option value="948회">948회</option>
                     <option value="947회">947회</option>
                 </select>
             </label>
-            <label class="lotto-data">
-                <input name="lottoNum" type="text" value="1,2,3,4,5">
+            <label>
+                <input type="text" class="lotto-num" id="num-info" value="">
             </label>
+            <button onclick="valueSelect()">조회하기</button>
+        </div>
+        <div id="lotto-result">
         </div>
 
         <!--            출처: https://doriri.tistory.com/59 [My Programming]-->
