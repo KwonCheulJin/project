@@ -150,9 +150,9 @@ function decryptEffect(elem, time) {
 
 }
 
-$(document).ready(function () {
-    // $('#num-info').empty();
-});
+// $(document).ready(function () {
+//     // $('#num-info').empty();
+// });
 
 
 function valueSelect() {
@@ -164,7 +164,7 @@ function valueSelect() {
     // $('#num-info').empty();
     $.ajax({
         type: "GET",
-        url: "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=950",
+        url: "/lotto",
         data: {},
         success: function (response) {
             console.log(response)

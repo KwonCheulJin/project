@@ -1,6 +1,6 @@
 import requests  # requests 라이브러리 설치 필요
 from pymongo import MongoClient
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 
 client = MongoClient('localhost', 27017)  # mongoDB는 27017 포트로 돌아갑니다.
 db = client.dbsparta  # 'dbsparta'라는 이름의 db를 사용합니다. 'dbsparta' db가 없다면 새로 만듭니다.
@@ -13,38 +13,23 @@ collect = db.lotto
 #
 # lotto_num = data.json()
 
-episodes = ['945', '946', '947', '948', '949', '950', '951']
-
-
-def get_request_by_episode(episode):
-    params = {
-        'method': 'getLottoNumber',
-        'drwNo': episode
-    }
-
-    # verify=False SSL 무시
-    req = requests.get('https://www.dhlottery.co.kr/common.do', params=params)
-    result = req.json()
-    return result
-
-
-for episode in episodes:
-    collect.insert_one(get_request_by_episode(episode))
-
-# doc = {
-#     'drwtNo1': drwtNo1,
-#     'drwtNo2': drwtNo2,
-#     'drwtNo3': drwtNo3,
-#     'drwtNo4': drwtNo4,
-#     'drwtNo5': drwtNo5,
-#     'drwtNo6': drwtNo6,
-# }
-
-# print(lotto_num)
-
-# print(type(result))
-# collect.insert_one(lotto_num)
-
+# episodes = ['945', '946', '947', '948', '949', '950', '951']
+#
+#
+# def get_request_by_episode(episode):
+#     params = {
+#         'method': 'getLottoNumber',
+#         'drwNo': episode
+#     }
+#
+#     # verify=False SSL 무시
+#     req = requests.get('https://www.dhlottery.co.kr/common.do', params=params)
+#     result = req.json()
+#     return result
+#
+#
+# for episode in episodes:
+#     collect.insert_one(get_request_by_episode(episode))
 app = Flask(__name__)
 
 
@@ -52,6 +37,13 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('index.html')
+
+
+@app.route('/lotto', methods=['GET'])
+def read_lotto_num():
+    lotto_nums = list(collect.find({}, {'_id': 0}))
+    print(lotto_nums)
+    return jsonify({'result': 'success', 'msg': '이 요청은 GET!'})
 
 
 if __name__ == '__main__':
