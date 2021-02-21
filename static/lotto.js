@@ -40,7 +40,8 @@ function whatis_date() {
 
     let r_dayday = ['일', '월', '화', '수', '목', '금', '토'];
     let r_day = r_addDate.getDay();
-    document.getElementById("raffle-day").innerText = "추 첨 일 : " + r_year + "/" + r_month + "/" + r_date + " (" + r_dayday[r_day] + ")";
+    let r_st = "추 첨 일 : " + r_year + "/" + r_month + "/" + r_date + " (" + r_dayday[r_day] + ")";
+    document.getElementById("raffle-day").innerText = r_st;
 
     /*payments-day*/
     let m_addDate = new Date();
@@ -50,7 +51,8 @@ function whatis_date() {
     let m_month = ("0" + (m_addDate.getMonth() + 1)).slice(-2);  // 월
     let m_date = ("0" + m_addDate.getDate()).slice(-2);
 
-    document.getElementById("payments-day").innerText = "지급기한 : " + m_year + "/" + m_month + "/" + m_date;
+    let m_st = "지급기한 : " + m_year + "/" + m_month + "/" + m_date;
+    document.getElementById("payments-day").innerText = m_st;
 
 }
 
@@ -71,7 +73,9 @@ function dead_line_publish() {
     let p_minutes = ("0" + p_today.getMinutes()).slice(-2);  // 분
     let p_seconds = ("0" + p_today.getSeconds()).slice(-2);  // 초
 
-    document.getElementById("publish-day").innerText = "발 행 일 : " + p_year + "/" + p_month + "/" + p_date + " (" + p_dayday[p_day] + ") " + p_hours + ":" + p_minutes + ":" + p_seconds;
+    let p_st = "발 행 일 : " + p_year + "/" + p_month + "/" + p_date + " (" + p_dayday[p_day] + ") " + p_hours + ":" + p_minutes + ":" + p_seconds;
+
+    document.getElementById("publish-day").innerText = p_st;
 }
 
 dead_line_publish();
@@ -94,7 +98,7 @@ btn.addEventListener("click", function () {
             setTimeout(function () {
                 tmp = 1,
                     btn.classList.remove("hide")
-            }, 10)
+            }, 1000)
     )
 });
 
@@ -139,7 +143,7 @@ function decryptEffect(elem, time) {
     elem.classList.add("done")
     elem.innerText = double_ary[list_index][time - 2];
 
-    if (time === 7) {
+    if (time == 7) {
         list_index++;
     }
 
