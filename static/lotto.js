@@ -40,8 +40,7 @@ function whatis_date() {
 
     let r_dayday = ['일', '월', '화', '수', '목', '금', '토'];
     let r_day = r_addDate.getDay();
-    let r_st = "추 첨 일 : " + r_year + "/" + r_month + "/" + r_date + " (" + r_dayday[r_day] + ")";
-    document.getElementById("raffle-day").innerText = r_st;
+    document.getElementById("raffle-day").innerText = "추 첨 일 : " + r_year + "/" + r_month + "/" + r_date + " (" + r_dayday[r_day] + ")";
 
     /*payments-day*/
     let m_addDate = new Date();
@@ -51,8 +50,7 @@ function whatis_date() {
     let m_month = ("0" + (m_addDate.getMonth() + 1)).slice(-2);  // 월
     let m_date = ("0" + m_addDate.getDate()).slice(-2);
 
-    let m_st = "지급기한 : " + m_year + "/" + m_month + "/" + m_date;
-    document.getElementById("payments-day").innerText = m_st;
+    document.getElementById("payments-day").innerText = "지급기한 : " + m_year + "/" + m_month + "/" + m_date;
 
 }
 
@@ -73,9 +71,7 @@ function dead_line_publish() {
     let p_minutes = ("0" + p_today.getMinutes()).slice(-2);  // 분
     let p_seconds = ("0" + p_today.getSeconds()).slice(-2);  // 초
 
-    let p_st = "발 행 일 : " + p_year + "/" + p_month + "/" + p_date + " (" + p_dayday[p_day] + ") " + p_hours + ":" + p_minutes + ":" + p_seconds;
-
-    document.getElementById("publish-day").innerText = p_st;
+    document.getElementById("publish-day").innerText = "발 행 일 : " + p_year + "/" + p_month + "/" + p_date + " (" + p_dayday[p_day] + ") " + p_hours + ":" + p_minutes + ":" + p_seconds;
 }
 
 dead_line_publish();
@@ -151,7 +147,6 @@ function decryptEffect(elem, time) {
 }
 
 $(document).ready(function () {
-    // 처음 보는 함수죠? 웹 페이지를 새로고침할 때마다 괄호 안 명령어가 실행된답니다!
     // $('#num-info').empty();
 });
 
