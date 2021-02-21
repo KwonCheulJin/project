@@ -150,10 +150,6 @@ function decryptEffect(elem, time) {
 
 }
 
-// $(document).ready(function () {
-//     // $('#num-info').empty();
-// });
-
 
 function valueSelect() {
     // let drwNo = $('#select-drwNo > option:selected').val();
