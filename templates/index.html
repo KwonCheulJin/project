@@ -114,9 +114,9 @@
             </div>
             <button id="lotto-2-button">시작!</button>
         </div>
-        <script src="{{ url_for('static', filename='lotto.js') }}"></script>
+        <script src="{{ url_for('static', filename='lotto.js') |autoversion }}"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="{{ url_for('static', filename = 'jquery.js')}} ">\x3C/script>')</script>
+<!--        <script>window.jQuery || document.write('<script src="{{ url_for('static', filename = 'jquery.js')}} ">\x3C/script>')</script>-->
 
 
     </body>
