@@ -176,16 +176,19 @@ function valueSelect() {
 
 function readNums(drwtNo6, drwtNo5, drwtNo4, drwtNo3, drwtNo2, drwtNo1, bnusNo) {
     let tempHtml =
-        `<p>
-            <span class="ball-645 num drwNo-1">${drwtNo1}</span>
-            <span class="ball-645 num drwNo-2">${drwtNo2}</span>
-            <span class="ball-645 num drwNo-3">${drwtNo3}</span>
-            <span class="ball-645 num drwNo-4">${drwtNo4}</span>
-            <span class="ball-645 num drwNo-5">${drwtNo5}</span>
-            <span class="ball-645 num drwNo-6">${drwtNo6}</span>
-            <span class="ball-645 num plus">+</span>
-            <span class="ball-645 num drwNo-bonus">${bnusNo}</span>
-        </p>`;
+        `<p class=lotto-result>
+        <span class="result">당 첨 결 과</span>
+    </p>
+    <p class="lotto-numbers">
+        <span class="ball-645 num drwNo-1">${drwtNo1}</span>
+        <span class="ball-645 num drwNo-2">${drwtNo2}</span>
+        <span class="ball-645 num drwNo-3">${drwtNo3}</span>
+        <span class="ball-645 num drwNo-4">${drwtNo4}</span>
+        <span class="ball-645 num drwNo-5">${drwtNo5}</span>
+        <span class="ball-645 num drwNo-6">${drwtNo6}</span>
+        <span class="ball-645 num plus">+</span>
+        <span class="ball-645 num drwNo-bonus">${bnusNo}</span>
+    </p>`;
 
 
     $(".number").append(tempHtml);

@@ -203,12 +203,32 @@ h1 {
   }
 }
 
+@media screen and (max-width: 350px) {
+  .lotto-infoNum {
+    padding: 0 3rem;
+  }
+}
+
 @media screen and (min-width: 1200px) {
-  .input-box {
+  .lotto-infoNum,
+  .input-box,
+  .number {
     max-width: 400px !important;
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .lotto-infoNum,
+  .input-box,
+  .number {
+    max-width: 400px !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .lotto-infoNum {
+    padding: 0 3rem;
+}
 div {
   display: block;
 }
@@ -228,52 +248,67 @@ div {
   text-align: center;
   color: red;
 }
+.input-box {
+  display: flex;
+  justify-content: flex-end;
+}
 
 .lotto-infoNum {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 0 1rem;
-  margin: auto auto 2.5rem;
+  margin: auto auto 0.5rem;
   width: 100%;
 }
 
-.lotto-infoNum .input-box {
-  width: 85%;
+.lotto-infoNum .number {
+  width: 100%;
   border: 2px solid pink;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
-.input-box .number {
-  display: flex;
-}
-
-.lotto-infoNum .input-box p {
+.lotto-infoNum .number .lotto-numbers {
   font-size: 1rem;
-  margin: 0.5rem 0.5rem;
-  padding: 0.5rem 0.5rem;
+  padding-top: 0;
   font-weight: 500;
+  margin: 0 0 0.5rem 0;
+  width: 230px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  border-radius: 5px;
 }
 
-span {
-  width: 1.5rem;
-  height: 1.5rem;
-  line-height: 0.5rem;
-  font-size: 1rem;
+.lotto-infoNum .number .lotto-result {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0.5rem 0 1rem 0;
+  font-weight: 500;
+  color: #999;
+}
+
+.lotto-infoNum .number .ball-645 {
+  display: inline-block;
+  width: 3rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1.25rem;
+  border-radius: 100%;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0.5rem 0 1rem 0;
 }
 
 .select-date {
-  padding: 0.5rem 0.5rem;
+  padding: 0.25rem 0.25rem;
   margin: 0.25rem;
-  font-size: 1.125rem;
+  font-size: 0.8rem;
 }
 
-button {
-  padding: 0.5rem 0.5rem;
+.select-box button {
+  padding: 0.25rem 0.25rem;
   font-size: 0.8rem;
   margin: 0.125rem;
-}
+}}
