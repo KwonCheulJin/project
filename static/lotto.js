@@ -152,15 +152,14 @@ function decryptEffect(elem, time) {
 
 
 function valueSelect() {
-    // let drwNo = $('#select-drwNo > option:selected').val();
-    // console.log(drwNo);
-
+    let drwNo = $('#select-drwNo > option:selected').val();
+    console.log(drwNo);
     // 1. ajax 로 데이터 가져온 후에
     // 2. #lotto-result 에 화면 그려주기
     // $('#num-info').empty();
     $.ajax({
         type: "GET",
-        url: "/lotto",
+        url: "/lotto?lotto_num_give=" + drwNo,
         data: {},
         success: function (response) {
             console.log(response)

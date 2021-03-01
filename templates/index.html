@@ -13,23 +13,34 @@
 
     <body>
         <div class="loader">
-            <h2>경고! 결과에 대해서 책임을 지지 않습니다. 재미로 이용해주세요!</h2>
+            <h4>경고! 결과에 대해서 책임을 지지 않습니다.<br>재미로 이용해주세요!</h4>
         </div>
 
         <div class="lotto-infoNum">
-            <label>
-                <select class="select-date" id="select-drwNo">
-                    <option selected value="">당첨번호</option>
-                    <option value="950회">950회</option>
-                    <option value="949회">949회</option>
-                    <option value="948회">948회</option>
-                    <option value="947회">947회</option>
-                </select>
-            </label>
-            <label>
-                <input type="text" class="lotto-num" id="num-info" value="">
-            </label>
-            <button onclick="valueSelect()">조회하기</button>
+            <div class="input-box">
+                <div class="select-box">
+                    <select class="select-date" id="select-drwNo">
+                        <option selected value="">당첨번호</option>
+                        <option value="952">952회</option>
+                        <option value="951">951회</option>
+                        <option value="950">950회</option>
+                        <option value="949">949회</option>
+                        <option value="948">948회</option>
+                        <option value="947">947회</option>
+                    </select>
+                    <button onclick="valueSelect()">조회하기</button>
+                </div>
+                <div class="number">
+                    <p class="drwNo-1">?</p>
+                    <p class="drwNo-2">?</p>
+                    <p class="drwNo-3">?</p>
+                    <p class="drwNo-4">?</p>
+                    <p class="drwNo-5">?</p>
+                    <p class="drwNo-6">?</p>
+                    <p class="drwNo-bonus">?</p>
+                </div>
+            </div>
+
         </div>
         <div id="lotto-result">
         </div>
@@ -112,11 +123,11 @@
 
 
             </div>
-            <button id="lotto-2-button">시작!</button>
+            <button id="lotto-2-button">랜덤번호 생성!</button>
         </div>
         <script src="{{ url_for('static', filename='lotto.js') |autoversion }}"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!--        <script>window.jQuery || document.write('<script src="{{ url_for('static', filename = 'jquery.js')}} ">\x3C/script>')</script>-->
+        <!--        <script>window.jQuery || document.write('<script src="{{ url_for('static', filename = 'jquery.js')}} ">\x3C/script>')</script>-->
 
 
     </body>
