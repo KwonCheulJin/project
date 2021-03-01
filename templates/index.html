@@ -16,11 +16,11 @@
             <h4>경고! 결과에 대해서 책임을 지지 않습니다.<br>재미로 이용해주세요!</h4>
         </div>
 
-        <div class="lotto-infoNum">
+        <div id="lotto-nums" class="lotto-infoNum">
             <div class="input-box">
                 <div class="select-box">
                     <select class="select-date" id="select-drwNo">
-                        <option selected value="">당첨번호</option>
+                        <option selected value="">당첨번호결과</option>
                         <option value="952">952회</option>
                         <option value="951">951회</option>
                         <option value="950">950회</option>
@@ -31,13 +31,16 @@
                     <button onclick="valueSelect()">조회하기</button>
                 </div>
                 <div class="number">
-                    <p class="drwNo-1">?</p>
-                    <p class="drwNo-2">?</p>
-                    <p class="drwNo-3">?</p>
-                    <p class="drwNo-4">?</p>
-                    <p class="drwNo-5">?</p>
-                    <p class="drwNo-6">?</p>
-                    <p class="drwNo-bonus">?</p>
+                    <p>
+                        <span class="ball-645 num drwNo-1">?</span>
+                        <span class="ball-645 num drwNo-2">?</span>
+                        <span class="ball-645 num drwNo-3">?</span>
+                        <span class="ball-645 num drwNo-4">?</span>
+                        <span class="ball-645 num drwNo-5">?</span>
+                        <span class="ball-645 num drwNo-6">?</span>
+                        <span class="ball-645 num plus">+</span>
+                        <span class="ball-645 num drwNo-bonus">?</span>
+                    </p>
                 </div>
             </div>
 
@@ -52,7 +55,7 @@
 
             <div id="numbers">
 
-                <div id="lotto-title">Lotto 6/45</div>
+                <div id="lotto-title">이번주는 될까?</div>
                 <div id="whatis-date">제 845회</div>
 
                 <div class="deadline">

@@ -152,8 +152,9 @@ function decryptEffect(elem, time) {
 
 
 function valueSelect() {
+    $('.number').empty();
     let drwNo = $('#select-drwNo > option:selected').val();
-    console.log(drwNo);
+    // console.log(drwNo);
     // 1. ajax 로 데이터 가져온 후에
     // 2. #lotto-result 에 화면 그려주기
     // $('#num-info').empty();
@@ -162,9 +163,30 @@ function valueSelect() {
         url: "/lotto?lotto_num_give=" + drwNo,
         data: {},
         success: function (response) {
-            console.log(response)
-
+            // console.log(response)
+            let lottoNums = response["lotto_nums"];
+            console.log(lottoNums);
+            for (let i = 0; i < lottoNums.length; i++) {
+                readNums(lottoNums[i]["drwtNo6"], lottoNums[i]["drwtNo5"], lottoNums[i]["drwtNo4"], lottoNums[i]["drwtNo3"], lottoNums[i]["drwtNo2"], lottoNums[i]["drwtNo1"], lottoNums[i]["bnusNo"])
+            }
 
         }
     })
+}
+
+function readNums(drwtNo6, drwtNo5, drwtNo4, drwtNo3, drwtNo2, drwtNo1, bnusNo) {
+    let tempHtml =
+        `<p>
+            <span class="ball-645 num drwNo-1">${drwtNo1}</span>
+            <span class="ball-645 num drwNo-2">${drwtNo2}</span>
+            <span class="ball-645 num drwNo-3">${drwtNo3}</span>
+            <span class="ball-645 num drwNo-4">${drwtNo4}</span>
+            <span class="ball-645 num drwNo-5">${drwtNo5}</span>
+            <span class="ball-645 num drwNo-6">${drwtNo6}</span>
+            <span class="ball-645 num plus">+</span>
+            <span class="ball-645 num drwNo-bonus">${bnusNo}</span>
+        </p>`;
+
+
+    $(".number").append(tempHtml);
 }

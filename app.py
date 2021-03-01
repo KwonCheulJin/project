@@ -57,9 +57,9 @@ def home():
 def read_lotto_num():
 
     lotto_nums = request.args.get('lotto_num_give')
-    # result = list(collect.find({'drwNo': lotto_nums}, {'_id': 0}))
-    print(lotto_nums)
-    return jsonify({'result': 'success', 'msg': '이 요청은 GET!'})
+    result = list(collect.find({'drwNo': lotto_nums}, {'_id': 0}))
+    print(result)
+    return jsonify({'result': 'success', 'lotto_nums': result})
 
 
 if __name__ == '__main__':
