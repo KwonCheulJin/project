@@ -1,9 +1,11 @@
 import os
+
+import requests
 from flask import request
 from flask import Flask, render_template, jsonify
 from pymongo import MongoClient
 
-client = MongoClient('localhost', 27017)  # mongoDB는 27017 포트로 돌아갑니다.
+client = MongoClient('mongodb://test:test@15.164.234.254', 27017)  # mongoDB는 27017 포트로 돌아갑니다.
 db = client.dbsparta  # 'dbsparta'라는 이름의 db를 사용합니다. 'dbsparta' db가 없다면 새로 만듭니다.
 collect = db.lotto
 
@@ -14,7 +16,7 @@ collect = db.lotto
 #
 # lotto_num = data.json()
 
-# episodes = ['952', '953']
+# episodes = ['947', '948', '949', '950', '951', '952', '953']
 #
 #
 # def get_request_by_episode(episode):
@@ -56,9 +58,12 @@ def home():
 @app.route('/lotto', methods=['GET'])
 def read_lotto_num():
 
-    lotto_nums = request.args.get('lotto_num_give')
+    lotto_nums = int(request.args.get('lotto_num_give'))
+    # print(type(lotto_nums), lotto_nums)
+    # print(list(collect.find({}, {'_id': 0})))
+
     result = list(collect.find({'drwNo': lotto_nums}, {'_id': 0}))
-    print(result)
+    # print(result)
     return jsonify({'result': 'success', 'lotto_nums': result})
 
 

@@ -152,9 +152,9 @@ function decryptEffect(elem, time) {
 
 
 function valueSelect() {
-    $('.number').empty();
+    // $('.number').empty();
     let drwNo = $('#select-drwNo > option:selected').val();
-    // console.log(drwNo);
+    // console.log('drwNo:' + drwNo);
     // 1. ajax 로 데이터 가져온 후에
     // 2. #lotto-result 에 화면 그려주기
     // $('#num-info').empty();
@@ -165,7 +165,7 @@ function valueSelect() {
         success: function (response) {
             // console.log(response)
             let lottoNums = response["lotto_nums"];
-            console.log(lottoNums);
+            // console.log(lottoNums);
             for (let i = 0; i < lottoNums.length; i++) {
                 readNums(lottoNums[i]["drwtNo6"], lottoNums[i]["drwtNo5"], lottoNums[i]["drwtNo4"], lottoNums[i]["drwtNo3"], lottoNums[i]["drwtNo2"], lottoNums[i]["drwtNo1"], lottoNums[i]["bnusNo"])
             }
@@ -175,6 +175,8 @@ function valueSelect() {
 }
 
 function readNums(drwtNo6, drwtNo5, drwtNo4, drwtNo3, drwtNo2, drwtNo1, bnusNo) {
+    $('#old-number').empty();
+    console.log('working')
     let tempHtml =
         `<p class=lotto-result>
         <span class="result">당 첨 결 과</span>
@@ -191,5 +193,5 @@ function readNums(drwtNo6, drwtNo5, drwtNo4, drwtNo3, drwtNo2, drwtNo1, bnusNo) 
     </p>`;
 
 
-    $(".number").append(tempHtml);
+    $("#old-number").append(tempHtml);
 }
