@@ -1,6 +1,6 @@
 <img src="https://user-images.githubusercontent.com/17819874/79853717-5db2f900-8403-11ea-99ba-ed0bb3cdb9ef.png" height="100"/>
 
-# 프로젝트 이름
+# 이번주는 될까?
 
 [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ohahohah/readme-template/graphs/commit-activity)
@@ -8,7 +8,7 @@
 
 > 프로젝트 간략 소개 한 문장
 
-- 일주일에 로또를 구매하는 친구들을 위한 랜덤번호 생성 웹사이트
+- 매주 로또를 구매하는 친구들을 위한 랜덤번호 생성 웹사이트
 - 로또 구매시 매번 결정하기 어려운 번호를 랜덤 번호로 뽑아서 해보자!(결과는 오로지 본인 몫!)
 
 ## 핵심 기능 Key Feature
