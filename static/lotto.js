@@ -176,7 +176,6 @@ function valueSelect() {
 
 function readNums(drwtNo6, drwtNo5, drwtNo4, drwtNo3, drwtNo2, drwtNo1, bnusNo) {
     $('#old-number').empty();
-    console.log('working')
     let tempHtml =
         `<p class=lotto-result>
         <span class="result">당 첨 결 과</span>
